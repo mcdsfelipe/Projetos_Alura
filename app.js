@@ -13,7 +13,7 @@ function exibirNaTela (tag,texto){
 
 function mensagemInicial(){
 exibirNaTela("h1","Jogo do Número Secreto");
-exibirNaTela("p","Escolha um número entre 1 e 10");
+exibirNaTela("p",`Escolha um número entre 1 e ${numeroLimite}:`);
 }
 
 function verificarChute(){
@@ -39,7 +39,7 @@ function verificarChute(){
 function gerarAleatorio(){
     let numeroEscolhido = parseInt(Math.random()*numeroLimite + 1);
     let quantidadeLista = listaNumerosSorteados.length;
-    if(quantidadeLista==numeroLimite){
+    if(quantidadeLista == numeroLimite){
         listaNumerosSorteados = [];
     }
     if(listaNumerosSorteados.includes(numeroEscolhido)){  //verifica se o numero escolhido já está na lista de numeros sorteados
